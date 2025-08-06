@@ -15,7 +15,7 @@ create table Companies (
 	year_founded varchar(100),
 	company_type varchar(50),
 	veridion_id varchar(255),
-   	 match_status varchar(255)
+   	match_status varchar(255)
 );
 
 
@@ -38,10 +38,10 @@ set input_company_name = ltrim(rtrim(lower(
       replace(replace(replace(replace(input_company_name, '.', ''), ',', ''), '(', ''), ')', '')
 ))),
 	company_name = ltrim(rtrim(lower(
-      replace(replace(replace(replace(input_company_name, '.', ''), ',', ''), '(', ''), ')', '')
+      	replace(replace(replace(replace(input_company_name, '.', ''), ',', ''), '(', ''), ')', '')
 ))),
 	company_legal_names = ltrim(rtrim(lower(
-	 replace(replace(replace(replace(input_company_name, '.', ''), ',', ''), '(', ''), ')', '')
+	replace(replace(replace(replace(input_company_name, '.', ''), ',', ''), '(', ''), ')', '')
 ))),
 	company_commercial_names = ltrim(rtrim(lower(
 	replace(replace(replace(replace(input_company_name, '.', ''), ',', ''), '(', ''), ')', '')
@@ -151,6 +151,7 @@ from Companies_Best_Matches
 where match_status = 'matched';
 
 select * from Clean_Companies
+
 
 
 
