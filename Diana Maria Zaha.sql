@@ -11,11 +11,11 @@ create table Companies (
 	company_legal_names varchar(255),  
 	company_commercial_names varchar(255),       
 	input_main_country_code varchar(100),
-    input_main_country varchar(100),
+    	input_main_country varchar(100),
 	year_founded varchar(100),
 	company_type varchar(50),
 	veridion_id varchar(255),
-    match_status varchar(255)
+   	 match_status varchar(255)
 );
 
 
@@ -151,5 +151,6 @@ from Companies_Best_Matches
 where match_status = 'matched';
 
 select * from Clean_Companies
+
 
 
